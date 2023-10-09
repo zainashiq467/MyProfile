@@ -1,0 +1,280 @@
+/* Reset default styles */
+
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Global Styles */
+
+:root {
+    --background-color: #f7f7f7;
+    /* Light mode background color */
+    --text-color: #333;
+    /* Light mode text color */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Add other light mode styles here */
+
+body.night-mode {
+    --background-color: #333;
+    /* Dark mode background color */
+    --text-color: #333;
+    /* Dark mode text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Button Styles */
+
+#night-mode-toggle {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#night-mode-toggle:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+
+/* Night Mode Icon */
+
+#night-mode-toggle::before {
+    content: "\f186";
+    /* Unicode for moon icon (you can use other icons) */
+    font-family: FontAwesome;
+    /* Use a font icon library like FontAwesome */
+    margin-right: 8px;
+}
+
+
+/* Night Mode Label */
+
+#night-mode-toggle span {
+    font-weight: bold;
+}
+
+
+/* Night Mode Active Styles */
+
+body.night-mode #night-mode-toggle {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+body.night-mode #night-mode-toggle:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Button Styles */
+
+#night-mode-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Switch Handle Styles */
+
+#night-mode-toggle::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Night Mode Active Styles */
+
+body.night-mode #night-mode-toggle {
+    background-color: #333;
+}
+
+body.night-mode #night-mode-toggle::before {
+    transform: translateX(30px);
+}
+
+
+/* Navigation Styles */
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    /* Align items to the left */
+}
+
+.menu {
+    list-style: none;
+    margin-left: auto;
+    /* Push menu to the right */
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffd700;
+}
+
+
+/* Hero Section Styles */
+
+.hero {
+    background-image: url('/images/hero-background1.jpg');
+    background-size: cover;
+    text-align: left;
+    padding: 150px 0;
+    color: #fff;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+}
+
+
+/* About Section Styles */
+
+.about {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-content {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* Portfolio Section Styles */
+
+.portfolio {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.portfolio .section-title {
+    color: #333;
+}
+
+
+/* Contact Section Styles */
+
+.contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact .section-title {
+    color: #333;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #ffd700;
+}
+
+
+/* Footer Styles */
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .menu li {
+        margin-right: 10px;
+    }
+    .hero {
+        padding: 100px 0;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}
